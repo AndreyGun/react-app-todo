@@ -1,0 +1,14 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+.app-header h1 {
+    color: #c18c8c;
+    text-shadow: 1px 1px 1px #000, 2px 2px 2px #67b316;
+}
+.app-header h2 {
+    color: #ccc;
+    text-shadow: 1px 1px 1px #000, 2px 2px 2px #67b316;
+}
