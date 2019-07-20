@@ -1,0 +1,11 @@
+
+.todo-list {
+    margin-top: 10px;
+}
+.todo-list .list-group-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    grid-gap: 5px;
+}

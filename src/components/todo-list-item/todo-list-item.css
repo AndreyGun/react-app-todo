@@ -1,0 +1,14 @@
+.list-group-item {
+    cursor: pointer;
+}
+.todo-list-item.done {
+    text-decoration: line-through;
+}
+.todo-list-item.important {
+    font-weight: bold;
+    color: steelblue
+}
+.list-group-item .btn {
+    width: 38px;
+    height: 38px;
+}
