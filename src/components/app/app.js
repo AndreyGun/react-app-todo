@@ -4,6 +4,7 @@ import AppHeader from '../app-header';
 import TodoList from '../todo-list';
 import SearchPanel from '../search-panel';
 import ItemStatusFilter from '../item-status-filter';
+import AddItem from '../add-item';
 
 import './app.css'
 
@@ -20,6 +21,8 @@ import './app.css'
     //         ]
     //     }
     // }
+
+    maxId = 100;
 
     //  АНАЛОГИЧНО НОМЕРУ 1
     state = {
@@ -42,7 +45,24 @@ import './app.css'
             }
         });
     }
+    addItem = (text) => {
+        const newItem = {
+            label: text,
+            important: false,
+            id: this.maxId++
+        }
+        this.setState(({todoData}) => {
+            const newArray = [
+                ...todoData,
+                newItem
+            ]
+            return {
+                todoData: newArray
+            }
+        });
 
+
+    }
     render() {
         return (
             <div>
@@ -56,6 +76,9 @@ import './app.css'
                     todos={this.state.todoData} 
                     onDeleted={ this.deleteItem }
                     />
+                <AddItem 
+                    onItemAdded={ this.addItem }
+                />
             </div>
         );
     }
