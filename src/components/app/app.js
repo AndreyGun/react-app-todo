@@ -60,8 +60,12 @@ import './app.css'
                 todoData: newArray
             }
         });
-
-
+    };
+    onToggleDone = (id) => {
+        console.log('this is ', id);
+    };
+    onToggleImportant = (id) => {
+        console.log('this is ', id);
     }
     render() {
         return (
@@ -73,8 +77,10 @@ import './app.css'
                 </div>
                 
                 <TodoList 
-                    todos={this.state.todoData} 
+                    todos={ this.state.todoData } 
                     onDeleted={ this.deleteItem }
+                    onToggleDone={ this.onToggleDone }
+                    onToggleImportant={ this.onToggleImportant }
                     />
                 <AddItem 
                     onItemAdded={ this.addItem }
