@@ -1,3 +1,7 @@
-.item-add-btn {
+.item-add-form {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-gap: 5px;
+    align-items: center;
     margin: 10px 0 0;
 }
